@@ -8,7 +8,7 @@ import streamlit as st
 from PIL import Image
 
 # Load the dataset
-data = pd.read_csv('amazon_product.csv')
+data = pd.read_csv(r'E:\Search-Engine-And-Recommendation-system-on-Amazon-Product\amazon_product.csv')
 
 # Remove unnecessary columns
 data = data.drop('id', axis=1)
@@ -40,7 +40,7 @@ def search_products(query):
     return results
 
 # web app
-img = Image.open('img.png')
+img = Image.open(r'E:\Search-Engine-And-Recommendation-system-on-Amazon-Product\download.png')
 st.image(img,width=600)
 st.title("Search Engine and Product Recommendation System ON Am Data")
 query = st.text_input("Enter Product Name")
